@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  background-color: cornflowerblue;
+}
+
+#description {
+  background-color: black;
+  text-transform: capitalize;
+  color: white;
+  position: absolute;
+  left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: unset;
+  width: calc(100vw - 25px);
+  animation: openDescription 1s forwards, closeDescription 1s forwards 2s;
+  box-shadow: 5px 5px 0 white;
+}
+
+#text {
+  margin: 15px;
+  animation: closeText 1s forwards 2s;
+}
+
+@keyframes openDescription {
+  from {
+    top: -100px;
+  }
+  to {
+    top: 10px;
+  }
+}
+
+@keyframes closeDescription {
+  from {
+    width: calc(100vw - 25px);
+  }
+  90% {
+    box-shadow: none;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes closeText {
+  90% {
+    opacity: 0.3;
+  }
+}
