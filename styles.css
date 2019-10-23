@@ -44,16 +44,14 @@
   from {
     width: calc(100vw - 25px);
   }
-  90% {
-    box-shadow: none;
-  }
   to {
+    box-shadow: none;
     width: 0;
   }
 }
 
 @keyframes closeText {
-  90% {
+  to {
     opacity: 0.3;
   }
 }
